@@ -1,0 +1,6 @@
+column,lower_bound,upper_bound,outlier_count,outlier_percentage,treatment_method
+amount,-35.67749999999999,178.52249999999998,25,8.2237,clip/winsorize
+customer_age,-2.875,90.125,0,0.0,clip/winsorize
+account_balance,13180.3275,96429.3275,7,2.3026,clip/winsorize
+is_fraud,0.0,0.0,32,10.5263,clip/winsorize
+amount_copy,-46.05999999999999,190.64,19,6.25,clip/winsorize

@@ -1,0 +1,45 @@
+version: '1.0'
+entities:
+- customer_id
+features:
+- feature_name: transaction_frequency
+  source_columns: entity history before current event
+  formula: Number of prior transactions for the entity
+  explanation: historical activity signal
+  expected_predictive_value: low
+  leakage_risk: low
+  point_in_time_safe: 'yes'
+- feature_name: average_transaction_amount
+  source_columns: prior transaction amounts
+  formula: Mean amount across prior events only
+  explanation: historical spending baseline
+  expected_predictive_value: medium
+  leakage_risk: medium
+  point_in_time_safe: 'yes'
+- feature_name: amount_deviation_from_average
+  source_columns: amount, prior average
+  formula: current amount minus prior average
+  explanation: deviation from historical baseline
+  expected_predictive_value: medium
+  leakage_risk: medium
+  point_in_time_safe: 'yes'
+- feature_name: transaction_amount_log
+  source_columns: amount
+  formula: log1p(max(amount,0))
+  explanation: reduces right skew and compresses extreme values
+  expected_predictive_value: medium
+  leakage_risk: medium
+  point_in_time_safe: 'yes'
+- feature_name: time_since_previous_transaction
+  source_columns: timestamp, prior timestamp
+  formula: Current timestamp minus previous timestamp in hours
+  explanation: velocity/recency signal
+  expected_predictive_value: medium
+  leakage_risk: medium
+  point_in_time_safe: 'yes'
+offline_store:
+  path: data/processed/final_dataset.csv
+online_store:
+  mode: local-demonstration
+  note: Architecture is compatible with Feast; no fake online API is created.
+feast_compatibility: true

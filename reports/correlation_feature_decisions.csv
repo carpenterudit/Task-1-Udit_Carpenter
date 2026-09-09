@@ -1,0 +1,4 @@
+feature_1,feature_2,correlation,absolute_correlation,retained_feature,removed_feature,reason
+amount,amount_copy,0.896288434001209,0.896288434001209,amount_copy,amount,Retained the stronger target relationship when target was available; otherwise retained the feature with greater observed variability/cardinality.
+amount,transaction_amount_log,0.9474671211979879,0.9474671211979879,transaction_amount_log,amount,Retained the stronger target relationship when target was available; otherwise retained the feature with greater observed variability/cardinality.
+amount_copy,transaction_amount_log,0.8659118971034958,0.8659118971034958,transaction_amount_log,amount_copy,Retained the stronger target relationship when target was available; otherwise retained the feature with greater observed variability/cardinality.

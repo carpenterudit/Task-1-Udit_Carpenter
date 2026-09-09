@@ -1,0 +1,33 @@
+data:
+  input_path: data/sample/transactions.csv
+  output_path: data/processed/final_dataset.csv
+
+target:
+  column: is_fraud
+
+preprocessing:
+  missing_threshold_drop: 0.05
+  missing_threshold_imputation: 0.20
+  outlier_method: IQR
+  zscore_threshold: 3.0
+  correlation_threshold: 0.80
+  random_state: 42
+
+features:
+  minimum_engineered_features: 3
+  entity_column: customer_id
+  timestamp_column: timestamp
+  amount_column: amount
+
+validation:
+  lazy: true
+  fail_on_invalid: true
+
+feature_store:
+  enabled: true
+  registry_path: feature_store/feature_definitions.yaml
+
+gui:
+  title: Advanced EDA & Feature Engineering
+  page_icon: 📊
+  layout: wide

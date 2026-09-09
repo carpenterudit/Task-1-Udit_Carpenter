@@ -1,0 +1,12 @@
+column,missing_count,missing_percentage,selected_method,reason
+transaction_id,0,0.0,none,No missing values.
+customer_id,0,0.0,none,No missing values.
+timestamp,0,0.0,none,No missing values.
+amount,18,5.9211,median,Moderate missingness; statistical imputation selected based on type/skewness.
+merchant_category,22,7.2368,mode,Moderate missingness; statistical imputation selected based on type/skewness.
+payment_method,18,5.9211,mode,Moderate missingness; statistical imputation selected based on type/skewness.
+location,32,10.5263,mode,Moderate missingness; statistical imputation selected based on type/skewness.
+customer_age,25,8.2237,mean,Moderate missingness; statistical imputation selected based on type/skewness.
+account_balance,36,11.8421,mean,Moderate missingness; statistical imputation selected based on type/skewness.
+is_fraud,0,0.0,none,No missing values.
+amount_copy,0,0.0,none,No missing values.

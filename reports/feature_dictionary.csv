@@ -1,0 +1,6 @@
+feature_name,source_columns,formula,explanation,expected_predictive_value,leakage_risk,point_in_time_safe
+transaction_frequency,entity history before current event,Number of prior transactions for the entity,historical activity signal,low,low,yes
+average_transaction_amount,prior transaction amounts,Mean amount across prior events only,historical spending baseline,medium,medium,yes
+amount_deviation_from_average,"amount, prior average",current amount minus prior average,deviation from historical baseline,medium,medium,yes
+transaction_amount_log,amount,"log1p(max(amount,0))",reduces right skew and compresses extreme values,medium,medium,yes
+time_since_previous_transaction,"timestamp, prior timestamp",Current timestamp minus previous timestamp in hours,velocity/recency signal,medium,medium,yes

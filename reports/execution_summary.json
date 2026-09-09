@@ -1,0 +1,53 @@
+{
+  "original_rows": 304,
+  "final_rows": 304,
+  "original_features": 11,
+  "final_features": 324,
+  "missing_values_handled": 151,
+  "outliers_treated": 83,
+  "engineered_features": 5,
+  "highly_correlated_features_removed": 2,
+  "validation_status": "VALID",
+  "final_dataset": "data\\processed\\final_dataset.csv",
+  "steps": [
+    {
+      "step": "Data ingestion",
+      "status": "PASS",
+      "duration_seconds": 0.055378
+    },
+    {
+      "step": "Quality analysis",
+      "status": "PASS"
+    },
+    {
+      "step": "Missing values",
+      "status": "PASS",
+      "duration_seconds": 0.014549
+    },
+    {
+      "step": "Outliers",
+      "status": "PASS",
+      "duration_seconds": 0.026751
+    },
+    {
+      "step": "Feature engineering",
+      "status": "PASS",
+      "duration_seconds": 0.01707
+    },
+    {
+      "step": "Categorical encoding",
+      "status": "PASS",
+      "duration_seconds": 0.01371
+    },
+    {
+      "step": "Correlation",
+      "status": "PASS",
+      "duration_seconds": 1.089181
+    },
+    {
+      "step": "Pandera validation",
+      "status": "PASS",
+      "duration_seconds": 0.006259
+    }
+  ]
+}
